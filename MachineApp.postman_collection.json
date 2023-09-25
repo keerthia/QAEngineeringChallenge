@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "3be07a1e-2916-4883-847d-03da66d82b19",
+		"name": "MachineApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23353834",
+		"_collection_link": "https://www.postman.com/galactic-zodiac-912564/workspace/calculatemachinehealth/collection/23353834-3be07a1e-2916-4883-847d-03da66d82b19?action=share&source=collection_link&creator=23353834"
+	},
+	"item": [
+		{
+			"name": "Empty Body with machines field only",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"machines\": {\n   \n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/machine-health/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"machine-health",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Empty Body - No fields",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/machine-health/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"machine-health",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Valid Input",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"responseBody = pm.response.json();",
+							"console.log(responseBody);",
+							"pm.test('Check JSON response against expected values', () => {",
+							"  pm.expect(responseBody.factory).to.equal(\"66.48\");",
+							"  pm.expect(responseBody.machineScores.weldingRobot).to.equal(\"76.70\");",
+							"   pm.expect(responseBody.machineScores.paintingStation).to.equal(\"56.25\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"machines\": {\n       \"weldingRobot\": {\n         \"vibrationLevel\": \"4.0\",\n         \"shieldingPressure\": \"12.0\",\n         \"wireFeedRate\": \"7.5\",\n         \"errorRate\": \"0.5\",\n         \"electrodeWear\": \"0.8\",\n         \"arcStability\": \"92\",\n         \"seamWidth\": \"1.5\",\n         \"coolingEfficiency\": \"85\"\n     },\n     \"paintingStation\": {         \n         \"flowRate\": \"20.0\",\n         \"pressure\":\"50.0\",\n         \"colorConsistency\": \"90.0\",\n         \"nozzleCondition\":\"0.5\"\n    }\n  }\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/machine-health/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"machine-health",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InValid Inputs",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"responseBody = pm.response.json();",
+							"console.log(responseBody);",
+							"pm.test('Check JSON response against expected values', () => {",
+							"  pm.expect(responseBody.factory).to.equal(\"0.00\");",
+							"  pm.expect(responseBody.machineScores.weldingRobot).to.equal(\"0.00\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"machines\": {\n     \"weldingRobot\": {\n      \"vibrationLevel\": \"nsdbjdsfbhhsjkdhfbksj\",\n      \"speed\":\"mnbfjdkjgnslkjnsf\"\n      }\n    },\n      \"paintingStation\": {\n      \"speed\": \"dkfjbns.kjfhsk\"\n      }\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/machine-health/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"machine-health",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

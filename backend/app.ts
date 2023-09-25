@@ -4,11 +4,17 @@ import {getMachineHealth} from './machineHealth';
 const app = express();
 const port = 3001;
 
+//Included  CORS Middleware to  allow origin (http://localhost:8081)
+const cors = require('cors');// Import the "cors" middleware
+app.use(cors());
+
 // Middleware to parse JSON request bodies
 app.use(express.json());
 
+
 // Endpoint to get machine health score
 app.post('/machine-health', (req: Request, res: Response) => {
+  res.header('Access-Control-Allow-Origin', 'http://localhost:8081');
   const result = getMachineHealth(req);
   if (result.error) {
     res.status(400).json(result);

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Opens the correct URL 1`] = `
+<Text
+  accessibilityRole="link"
+  href="http://localhost:8081/"
+  hrefAttrs={
+    {
+      "target": "_blank",
+    }
+  }
+  onPress={[Function]}
+  style={{}}
+/>
+`;

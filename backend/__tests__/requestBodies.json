@@ -1,0 +1,30 @@
+{
+  "request1": {
+    "machines": {
+      "weldingRobot": {
+        "vibrationLevel": "4.0",
+        "shieldingPressure": "12.0",
+        "wireFeedRate": "7.5",
+        "errorRate": "0.5",
+        "electrodeWear": "0.8",
+        "arcStability": "92",
+        "seamWidth": "1.5",
+        "coolingEfficiency": "85"
+      }
+    }
+  },
+  "request2": {
+    "machines": {
+      "weldingRobot": {
+        "vibrationLevel": "3.5",
+        "shieldingPressure": "11.0",
+        "wireFeedRate": "8.0",
+        "errorRate": "0.6",
+        "electrodeWear": "0.9",
+        "arcStability": "90",
+        "seamWidth": "1.6",
+        "coolingEfficiency": "86"
+      }
+    }
+  }
+}

@@ -27,12 +27,16 @@ export default function StateScreen() {
     }, []),
   );
 
+
+
   const calculateHealth = useCallback(async () => {
+  console.log("apiUrl",apiUrl);
     try {
       const response = await axios.post(apiUrl, {
         machines: machineData?.machines,
       });
 
+        //response.setHeader('Access-Control-Allow-Origin', '*');
       if (response.data?.factory) {
         setScores(response.data);
       }

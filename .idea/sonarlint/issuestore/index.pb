@@ -1,0 +1,41 @@
+
+9
+	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+Y
+)backend/node_modules/accepts/package.json,9/8/98b6b98b546f11540dcf12f5d633516bd01a11d9
+U
+%backend/node_modules/express/index.js,b/a/ba442842691e89fd80a4e99e650133acd98bf4b1
+V
+&backend/node_modules/express/Readme.md,2/d/2dea0bab41bb1f3869f4b29b3297630eb4771474
+Y
+)backend/node_modules/express/package.json,5/a/5ac110a9064f43daa76bdc22fd3f409afab95988
+‰
+Ynative-app/node_modules/@expo/dev-server/build/middleware/remoteDevtoolsCorsMiddleware.js,a/a/aa3340fa90ba2b0562044daa7b547b88200238a0
+}
+Mnative-app/node_modules/@expo/cli/build/src/start/interface/startInterface.js,2/0/20f15d636ddf8b4f37db90a6b3ccfe952b5ea7f9
+R
+"backend/node_modules/send/index.js,d/e/dee505af9d48b178ba30d28b6cc288f665bbc4df
+J
+native-app/metro.config.js,e/0/e004ed044aac50e1aa3b437420ea1de7a17815aa
+Z
+*backend/node_modules/finalhandler/index.js,c/f/cfbe2a5cd3888b88734c07c551d385d67895501a
+y
+Ibackend/node_modules/caniuse-lite/data/features/contentsecuritypolicy2.js,9/4/941c59ee27ed8a3d1c1256d08b9ed4795936eca3
+E
+backend/tsconfig.json,2/d/2de55f36b9608859c02740cfa56b943f6eff3a73
+D
+backend/package.json,2/d/2d67691333633e849af94af966942f0c1b3151c6
+L
+native-app/package-lock.json,d/5/d5ca59ee398c723578fd63470d154f84cad4bd6b
+P
+ native-app/components/Picker.tsx,a/d/ade5f495444996fc3386fa1bfa43ef9c4297cda8
+P
+ native-app/components/Themed.tsx,1/0/109e793e1b0b987aa7304210409b0fbcce3800d9
+C
+native-app/app.json,8/d/8d4bafc0e62f3e730a189be10f391527491d2d6b
+D
+backend/netlify.toml,e/e/ee959440f301c46a968dfdab839d455a53bd325e
+G
+backend/calculations.ts,d/0/d0d639d9368eba9d8542cee03934faf18918a324
+H
+backend/machineHealth.ts,5/d/5db0be178ea173bb22f8881e08a88a386307ef72
